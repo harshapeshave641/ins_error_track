@@ -21,7 +21,7 @@ export default function App() {
     <ErrorBoundary>
     <div>
       <Layout />
-      <ErrorTrigger/>
+      {/* <ErrorTrigger/> */}
       {/* <TestError />
       <TestError1/> */}
     </div>

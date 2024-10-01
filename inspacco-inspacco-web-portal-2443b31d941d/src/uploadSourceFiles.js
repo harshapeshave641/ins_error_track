@@ -4,7 +4,7 @@ const path = require('path');
 const FormData = require('form-data'); // Import FormData from the form-data package
 
 const rollbarAccessToken = '5a7528a0778e412caba91bae0ca0ce95';
-const sourceMapDirectory = path.join(process.cwd(), 'dist');
+const sourceMapDirectory = path.resolve(__dirname, '../dist');;
 
 async function uploadSourceMaps() {
   try {
@@ -17,7 +17,7 @@ async function uploadSourceMaps() {
 
         // Create FormData and append the source map content
         const formData = new FormData();
-        formData.append('version', '3.2');
+        formData.append('version', '3.3');
         formData.append('access_token', rollbarAccessToken);
         formData.append('minified_url', `http://localhost:3000/${file.replace('.map', '')}`);
         formData.append('minified_file', file.replace('.map', ''));

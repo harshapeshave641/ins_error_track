@@ -20,7 +20,7 @@
           source_map_enabled: true, // false by default
           
           // -- Add this into your configuration ---
-          code_version: "3.2",
+          code_version: "3.3",
           // ---------------------------------------
           
           // Optionally have Rollbar guess which frames the error was 
